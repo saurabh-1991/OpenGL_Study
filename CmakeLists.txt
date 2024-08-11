@@ -1,0 +1,60 @@
+cmake_minimum_required(VERSION 3.26)
+project(SVS_Poc)
+
+set(CMAKE_CXX_STANDARD 17)
+
+file(GLOB_RECURSE SOURCES ${CMAKE_CURRENT_SOURCE_DIR}/Src/*.cpp)
+file(GLOB_RECURSE INC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/Inc/*.hpp)
+message(STATUS "SRC :-  ${SOURCES}")
+message(STATUS "INC_DIR :-  ${INC_DIR}")
+
+#find_package(PkgConfig REQUIRED)
+# Find required libraries
+#pkg_search_module(GLFW REQUIRED glfw3)
+find_package(glfw3 3.4 REQUIRED)
+find_package(GLEW REQUIRED)
+find_package(OpenGL REQUIRED)
+#find_package(OpenCL REQUIRED)
+find_package(OpenCV REQUIRED)
+
+# Set the compiler flags for M1
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated-declarations")
+# Set include directories
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/Inc
+    ${GLFW_INCLUDE_DIR}
+    ${OPENGL_INCLUDE_DIR}
+    #${OPENCL_INCLUDE_DIR}
+    ${OPENCV_INCLUDE_DIR}
+)
+
+# Set library directories
+link_directories(
+    ${GLFW_LIBRARY_DIR}
+    #${OPENCL_LIBRARY_DIR}
+    ${OPENCV_LIBRARY_DIR}
+)
+# Add executable target
+add_executable(SVS_Poc
+    ${SOURCES}
+    ${INC_DIR}
+)
+# Link libraries
+target_link_libraries(SVS_Poc
+    glfw
+    #glew
+    opencv_core
+    opencv_highgui
+    opencv_imgproc
+    #${GLFW_LIBRARIES} 
+    #-framework Cocoa 
+    #-framework IOKit 
+    #-framework CoreVideo
+    #-framework OpenGL::GL
+    ${OPENGL_LIBRARY}
+    #${GLEW_LIBRARIES}
+    GLEW::GLEW
+)
+
+message(STATUS "GLFW_LIBRARIES is ${GLFW_LIBRARIES}")
+target_compile_options(SVS_Poc PUBLIC ${GLFW_CFLAGS_OTHER})

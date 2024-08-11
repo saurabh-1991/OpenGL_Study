@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/Users/saurabhkulkarni/Saurabh/OpenGL-Study/TestCode1_Window/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/Users/saurabhkulkarni/Saurabh/OpenGL-Study/TestCode1_Window/Inc -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -isystem /opt/homebrew/Cellar/opencv/4.10.0_1/include/opencv4  -Wno-deprecated-declarations -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks  -o CMakeFiles/SVS_Poc.dir/Src/main.cpp.o -c /Users/saurabhkulkarni/Saurabh/OpenGL-Study/TestCode1_Window/Src/main.cpp",
+  "file": "/Users/saurabhkulkarni/Saurabh/OpenGL-Study/TestCode1_Window/Src/main.cpp",
+  "output": "CMakeFiles/SVS_Poc.dir/Src/main.cpp.o"
+},
+{
+  "directory": "/Users/saurabhkulkarni/Saurabh/OpenGL-Study/TestCode1_Window/build",
+  "command": "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -I/Users/saurabhkulkarni/Saurabh/OpenGL-Study/TestCode1_Window/Inc -F/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk/System/Library/Frameworks -isystem /opt/homebrew/include -isystem /opt/homebrew/Cellar/opencv/4.10.0_1/include/opencv4  -Wno-deprecated-declarations -g -std=gnu++17 -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX14.4.sdk -F/Library/Developer/CommandLineTools/SDKs/MacOSX14.sdk/System/Library/Frameworks  -o CMakeFiles/SVS_Poc.dir/Src/svs.cpp.o -c /Users/saurabhkulkarni/Saurabh/OpenGL-Study/TestCode1_Window/Src/svs.cpp",
+  "file": "/Users/saurabhkulkarni/Saurabh/OpenGL-Study/TestCode1_Window/Src/svs.cpp",
+  "output": "CMakeFiles/SVS_Poc.dir/Src/svs.cpp.o"
+}
+]
